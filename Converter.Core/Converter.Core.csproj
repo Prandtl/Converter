@@ -35,6 +35,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Converters\DollarToRoubleValueConverter.cs" />
     <Compile Include="Converters\StringLengthValueConverter.cs" />
     <Compile Include="Converters\StringReverseValueConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

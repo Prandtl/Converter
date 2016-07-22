@@ -5,7 +5,7 @@ using MvvmCross.Droid.Views;
 namespace Converter.Droid
 {
     [Activity(
-        Label = "Converter.Droid"
+        Label = "Converter"
         , MainLauncher = true
         , Icon = "@drawable/icon"
         , Theme = "@style/Theme.Splash"

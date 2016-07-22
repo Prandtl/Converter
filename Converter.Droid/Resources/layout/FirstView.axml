@@ -4,19 +4,46 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="Сумма в долларах" />
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="40dp"
-        local:MvxBind="Text Foo" />
+        android:textSize="30dp"
+        android:inputType="number"
+        android:digits="0123456789.,"
+        local:MvxBind="Text DollarAmount" />
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="40dp"
-        local:MvxBind="Text Foo, Converter=StringLength" />
-    <TextView
+        android:textSize="25dp"
+        android:text="Курс доллара" />
+    <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textSize="40dp"
-        local:MvxBind="Text Foo, Converter=StringReverse" />
+        android:textSize="30dp"
+        android:inputType="number"
+        android:digits="0123456789.,"
+        local:MvxBind="Text Course" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:textSize="25dp"
+            android:text="Сумма в рублях: "
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView1" />
+        <TextView
+            android:textSize="35dp"
+            local:MvxBind="Text DollarToRouble(DollarAmount, Course)"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView2" />
+    </LinearLayout>
 </LinearLayout>
